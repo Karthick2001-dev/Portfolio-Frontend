@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/favicon.ico">
+    <title>Karthick</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+      <nav id="desktop-nav">
+        <div class="logo">
+            <a>Karthick</a>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#Certifications">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">Karthick</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#Certifications" onclick="toggleMenu()">Certifications</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="profile">
+        <!-- <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+        </div> -->
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Karthick</h1>
+            <p class="section__text__p2">Artificial Intelligence Engineer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Karthick_Resume.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/'" />
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="left-column">
+                <div class="about-details-container">
+                    <div class="details-container experience-left">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                        <h1>Experience</h1>
+                        <div class="experience-content">
+                            <div class="experience-item">
+                                <h4>1+ years - Data Analysis</h4>
+                            </div>
+                            <div class="experience-item">
+                                <h4>1+ years - Artificial Intelligence</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="Education icon" class="icon" />
+                        <h1>Education</h1>
+                        <div class="education-content">
+                            <div class="education-item">
+                                <h5>Bachelor of Technology in Electronics and Communication Engineering</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="text-container">
+                    <p><b>
+                  Karthick is an innovative Data Scientist with a passion for transforming AI 
+                  research into real-world impact. With expertise in machine learning, NLP, generative AI, 
+                  and cloud computing, he has engineered cutting-edge AI models, optimized data pipelines,
+                  and enhanced business intelligence solutions.Armed with AWS and Microsoft certifications, including AWS Solutions Architect,
+                  he excels in AI-driven automation, data visualization, and cloud-native development. 
+                  Whether building intelligent chatbots, predictive models, or scalable data systems.</b></p>
+                    <br>
+                    <p><b> 
+                   Karthick thrives on pushing technological boundaries to create smarter, more efficient 
+                   solutions.Beyond technical innovation, Karthick is dedicated to bridging AI research with 
+                   business transformation, helping organizations unlock the full potential of data-driven 
+                   decision-making. With a strong problem-solving mindset and a passion for continuous learning,
+                   he is always exploring new ways to redefine what’s possible with AI</b></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#experience'"
+        /> -->
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="details-container_exp">
+                <div class="article-container">
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Artificial Intelligence</h3>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Machine Learning</h3>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>NLP</h3>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>RAG</h3>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Data Warehousing</h3>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Snowflake</h3>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>AWS</h3>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Power BI</h3>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>MicroStrategy</h3>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Llama Index</h3>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div>
+                            <h3>Crew AI</h3>
+                        </div>
+                    </article>
+                    <article>
+                      <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
+                      <div>
+                        <h3>Vector Databases</h3>
+                      </div>
+                    </article>
+                    </h3>
+                </div>
+                </article>
+            </div>
+        </div>
+        </div>
+        <!-- <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#Certifications'"
+        /> -->
+    </section>
+    <section id="Certifications">
+        <p class="section__text__p1">Browse My </p>
+        <h1 class="title">Certifications</h1>
+
+        <div class="certifications-container">
+
+            <div class="certification-item">
+              <a href="https://www.credly.com/badges/edefcd23-c112-4ef5-a5e7-bcb82e85777d/public_url" target="_blank">
+                  <img src="./assets/Solution_Arch.jpg" alt="AWS Certified Solutions Architect" class="certification-badge" />
+                  <h3 class="certification-name">AWS Certified Solutions Architect</h3>
+              </a>
+            </div> 
+
+            <div class="certification-item">
+                <a href="https://www.credly.com/badges/a430c295-fb74-4bac-b888-1d19bcc5a36f/linked_in_profile" target="_blank">
+                    <img src="./assets/AWS Certified AI Practitioner badge.png" alt="AWS Certified AI Practitioner" class="certification-badge" />
+                    <h2 class="certification-name">AWS Certified AI Practitioner</h2>
+                </a>
+            </div>
+
+            <div class="certification-item">
+                <a href="https://www.credly.com/badges/769a1892-43ab-40c0-9c68-574e8a682c7d/linked_in_profile" target="_blank">
+                    <img src="./assets/AWS-Certified-Cloud-Practitioner.png" alt="AWS Certified Cloud Practitioner" class="certification-badge" />
+                    <h3 class="certification-name">AWS Certified Cloud Practitioner</h3>
+                </a>
+            </div>
+
+            <div class="certification-item">
+                <a href="https://learn.microsoft.com/en-in/users/karthickt-6832/credentials/462ca18d5a44e515?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank">
+                    <img src="./assets/PL-300.png" alt="Power BI Data Analyst Associate" class="certification-badge" />
+                    <h3 class="certification-name">Power BI Data Analyst Associate</h3>
+                </a>
+            </div>
+            
+        </div>
+        <!-- <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+        />  -->
+    </section>
+
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/Chatbot.avif" alt="Project 1" class="project-img" />
+                    </div>
+                    <h4 class="experience-sub-title project-title">Gen AI Powered RFP Automation</h4>
+                    <div class="btn-container">
+
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/Sales.avif" alt="Project 2" class="project-img" />
+                    </div>
+                    <h4 class="experience-sub-title project-title">Adventure Works Sales Analysis Dashboard</h4>
+                    <div class="btn-container">
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="./assets/Electric.webp" alt="Project 3" class="project-img" />
+                    </div>
+                    <h6 class="experience-sub-title project-title">Energy Consumption and Demand Prediction</h6>
+                    <div class="btn-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#contact'"
+        /> -->
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                <p><a href="mailto:examplemail@gmail.com">karthickthirumalai06@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                <p><a href="https://www.linkedin.com/in/karthick-t-data-science/">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#Certifications">Certifications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <div id="chat-widget">
+        <!-- 📌 Chat Button with Cloud Image -->
+        <button id="chat-toggle">
+            <img src="./assets/Chat-button.png" alt="Chat Icon">
+        </button>
+
+        <div id="chat-box" class="hidden">
+            <div id="chat-header">
+                <span>Chat with Karthick</span>
+                <span id="ai-powered">AI Powered</span>
+                <button id="close-chat">✖</button>
+            </div>
+
+            <div id="chat-body"></div>
+            <div id="chat-footer">
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📌 Chat Notification Bubble -->
+    <div id="chat-notify">
+        <p><strong>I am online!</strong><br>How can I help you?</p>
+        <div class="chat-arrow"></div>
+    </div>
+
+
+
+</body>
+
+
+</html>
