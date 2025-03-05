@@ -85,7 +85,7 @@ function toggleMenu() {
         const typingIndicator = showTypingIndicator();
   
         try {
-            const response = await fetch("http://127.0.0.1:8000/chat", {
+            const response = await fetch("https://portfolio-abcw.onrender.com/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ question: userMessage }),
