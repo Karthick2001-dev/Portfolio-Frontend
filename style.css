@@ -240,7 +240,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  height: 83vh;
+  height: calc(100vh - 17vh);
   padding: 2rem;
   margin-bottom: 2rem;
   padding-bottom: -3rem;
