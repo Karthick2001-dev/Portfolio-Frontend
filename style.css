@@ -243,6 +243,7 @@ nav {
   height: calc(100vh - 17vh);
   padding: 2rem;
   padding-bottom: -3rem;
+  scroll-margin-top: -8rem
 }
 
 
