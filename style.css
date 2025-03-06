@@ -242,7 +242,6 @@ nav {
   align-items: center; /* Center vertically */
   height: calc(100vh - 17vh);
   padding: 2rem;
-  margin-bottom: 2rem;
   padding-bottom: -3rem;
 }
 
