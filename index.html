@@ -19,6 +19,7 @@
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About me</a></li>
+                <li><a href="#timeline-section">Evolution</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#Certifications">Certifications</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -44,6 +45,7 @@
             </ul>
         </div>
     </nav>
+
     <section id="profile">
         <!-- <div class="section__pic-container">
             <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
@@ -65,6 +67,7 @@
             </div>
         </div>
     </section>
+ 
     <section id="about">
         <p class="section__text__p1">Get To Know More</p>
         <h1 class="title">About Me</h1>
@@ -122,6 +125,57 @@
           onclick="location.href='./#experience'"
         /> -->
     </section>
+
+    <section id="timeline-section">
+        <h2 class="timeline-title">Stepping Stones to Success</h2>
+        <div class="timeline">
+            <div class="timeline-container">
+                <svg width="100%" height="300" viewBox="0 0 1100 300">
+                    <!-- Straight Horizontal Line -->
+                    <line x1="50" y1="150" x2="1050" y2="150" stroke="#007bff" stroke-width="4"/>
+    
+                    <!-- Timeline Dots -->
+                    <circle class="timeline-dot" cx="50" cy="150" r="7" />
+                    <circle class="timeline-dot" cx="200" cy="150" r="7" />
+                    <circle class="timeline-dot" cx="350" cy="150" r="7" />
+                    <circle class="timeline-dot" cx="500" cy="150" r="7" />
+                    <circle class="timeline-dot" cx="650" cy="150" r="7" />
+                    <circle class="timeline-dot glowing-dot" cx="800" cy="150" r="7" />
+                    <circle class="timeline-dot" cx="950" cy="150" r="7" />
+                    <circle class="timeline-dot" cx="1050" cy="150" r="7" />
+    
+                    <!-- Company Logos Above the Company Names -->
+                    <image href="./assets/Infocepts.png" x="118" y="170" width="150" height="100"/>
+                    <image href="./assets/Microsoft.png" x="280" y="25" width="150" height="70"/>
+                    <image href="./assets/SRM.png" x="445" y="195" width="100" height="50"/>
+                    <image href="./assets/AWS.png" x="620" y="60" width="40" height="40"/>
+                    <image href="./assets/sciera.png" x="730" y="170" width="150" height="100"/>
+                    <image href="./assets/AWS.png" x="930" y="200" width="40" height="40"/>
+                    <image href="./assets/AWS.png" x="1030" y="60" width="40" height="40"/>
+                    
+    
+                    <!-- Year Labels (Alternating positions) -->
+                    <text x="50" y="130" class="event-label">2019</text>
+                    <text x="200" y="170" class="event-label">2023 - Feb</text>
+                    <text x="350" y="130" class="event-label">2023 - Aug</text>
+                    <text x="500" y="170" class="event-label">2023 - June</text>
+                    <text x="650" y="130" class="event-label">2024 - Jan</text>
+                    <text x="800" y="180" class="event-label">Data Scientist</text>
+                    <text x="950" y="170" class="event-label">2024 - Sep</text>
+                    <text x="1050" y="130" class="event-label">2024 - Dec</text>
+    
+                    <!-- Event Descriptions (Alternating positions) -->
+                    <text class="event-desc" x="200" y="190">Data Analyst at Infocepts</text>
+                    <text class="event-desc" x="350" y="110">Microsoft Certified Data Analyst</text>
+                    <text class="event-desc" x="500" y="190">Engineering Milestone</text>
+                    <text class="event-desc" x="650" y="110">AWS Cloud Practitioner</text>
+                    <text class="event-desc" x="950" y="190">AWS AI Practitioner</text>
+                    <text class="event-desc" x="1019" y="110">AWS Solution Architect</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Experience</h1>
@@ -222,7 +276,7 @@
 
             <div class="certification-item">
               <a href="https://www.credly.com/badges/edefcd23-c112-4ef5-a5e7-bcb82e85777d/public_url" target="_blank">
-                  <img src="./assets/Solution_Arch.jpg" alt="AWS Certified Solutions Architect" class="certification-badge" />
+                  <img src="./assets/Solution_Arch.png" alt="AWS Certified Solutions Architect" class="certification-badge" />
                   <h3 class="certification-name">AWS Certified Solutions Architect</h3>
               </a>
             </div> 
@@ -295,20 +349,6 @@
           class="icon arrow"
           onclick="location.href='./#contact'"
         /> -->
-    </section>
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-                <p><a href="mailto:examplemail@gmail.com">karthickthirumalai06@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-                <p><a href="https://www.linkedin.com/in/karthick-t-data-science/">LinkedIn</a></p>
-            </div>
-        </div>
     </section>
     <footer>
         <nav>
