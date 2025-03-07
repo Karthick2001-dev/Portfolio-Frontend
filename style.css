@@ -9,6 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #f9f9f9, #eaeaea);
 }
 
 html {
@@ -241,9 +242,9 @@ nav {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: calc(100vh - 17vh);
-  padding: 2rem;
+  margin-bottom: 2rem;
   padding-bottom: -3rem;
-  scroll-margin-top: -8rem
+  padding-left: 0rem;
 }
 
 
@@ -415,116 +416,89 @@ nav {
   justify-content: center; /* Centers content vertically */
   align-items: center; /* Centers content horizontally */
   height: 100vh;
-  scroll-margin-top: -8rem; /* Adjust to match navbar height */
-  padding-top: 2.5rem;
-  padding-bottom: 5 rem;
-  margin: auto;
+  scroll-margin-top: -6.5rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #f9f9f9, #eaeaea);
 }
 
-
+/* About Containers */
 .about-containers {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  margin: 2rem 0;
-}
-
-.about-details-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Image Styling */
-.about-pic {
-  border-radius: 2rem;
-  max-width: 100%; /* Ensures the image is responsive */
-  height: auto;
-}
-
-.article-container {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 2rem;
 }
 
-/* Article Items */
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  max-width: 300px;
-  text-align: center;
-}
-
-article .icon {
-  width: 40px;
-  height: 40px;
-}
-
-/* Text Content */
-.text-container {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: justify;
-  margin-bottom: 5em;
-  width: 90%;
-  max-width: 800px; /* Prevents it from stretching too wide */
-  margin: auto;
-}
-
-/* Details Containers */
+/* Experience and Education Boxes */
 .details-container {
-  padding: 1.5rem;
+  padding: 2rem;
   flex: 1;
   background: white;
-  border-radius: 2rem;
-  border: 0.1rem solid rgb(163, 163, 163);
+  border-radius: 1.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-bottom: 20px;
   width: 90%;
-  max-width: 600px; /* Prevents overflow */
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.details-container:hover {
+  transform: scale(1.05);
+}
+
+/* About Text Styling */
+.text-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: justify;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  font-size: 1.1rem;
+  line-height: 1.8;
   margin: auto;
-}
-
-.right-column {
-  flex: 12; /* Increase flex value to make it larger */
-  font-size: 1.2rem; /* Increase font size */
-  display: flex;
-  flex-direction: column;/* Add spacing for better readability */
-}
-
-
-.left-column {
-  flex: 7; /* Increased from 5 to 7 for more width */
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-
-/* Icon Adjustments */
-.icon {
-  width: 30px;
-  height: 30px;
+  
 }
 
 /* Headings */
-h1,
-h3 {
-  font-size: 1.75rem;
-  font-weight: 500;
-  margin-bottom: 10px;
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
 }
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Icons */
+.icon {
+  width: 40px;
+  height: 40px;
+  color: #007bff;
+}
+
+/* Adjusting Columns */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-column {
+  flex: 2;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 
 
@@ -659,6 +633,13 @@ h3 {
   width: 100%;
   max-width: 1900px; /* Increased max-width for a bigger container */
   margin: 0 auto;
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 /* Expanding experience details container */
@@ -894,74 +875,85 @@ article:hover {
 
 
 /* PROJECTS SECTION */
-
+/* PROJECT SECTION */
 #projects {
   position: relative;
-  margin: 9em auto 0 auto; /* Moves section down while keeping it centered */
-  width: 80%;
+  margin: 6em auto 0 auto; /* Adjust margin */
+  width: 85%;
   scroll-margin-top: -60px;
   font-size: 1rem;
-  margin-bottom: 5rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-/* Ensure uniform size for each project container */
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+/* Project Grid Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2.5rem; /* Adjusts space between cards */
+  justify-content: center;
+  align-items: start;
   width: 100%;
-  max-width: 800px;
-  height: auto;
-  max-height: 500px;
-  padding: 1.5rem; /* Slightly increased padding for consistency */
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin: 0 auto;
-  display: flex; /* Aligns items properly */
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Cards */
+.color-container {
+  background: white;
+  border-radius: 1.2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  max-width: 350px;
+  height: 100%; /* Ensures all cards have the same height */
 }
 
-/* Ensure all project images are the same size */
+/* Hover Effect */
+.color-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Images */
 .project-img {
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   width: 100%;
-  max-width: 300px; /* Set max width for consistency */
-  max-height: 200px; /* Set max height for uniformity */
+  max-width: 280px;
+  height: 180px; /* Ensures uniform height */
   object-fit: cover;
 }
 
-/* Ensure all project titles have the same size */
+/* Project Titles */
 .project-title {
-  margin: 1rem 0;
-  font-size: 1.5rem; /* Set uniform title size */
-  color: black;
-  font-weight: bold;
+  margin: 0.8rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
 }
 
-/* Ensure uniform button size */
+/* Project Button */
 .project-btn {
   font-size: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   font-weight: 600;
-  width: 150px; /* Ensures all buttons are the same width */
+  width: 140px;
   text-align: center;
-}
-
-/* Fix font size issue */
-.project-box {
-  font-size: 1rem; /* Removed space between `0.5` and `rem` */
-  line-height: 1.5;
-}
-
-/* Adjust icon placement */
-.icon.arrow {
-  height: auto;
-  position: relative;
-  right: -100%;
-  bottom: 5%;
+  border: 2px solid #007bff;
+  background: transparent;
+  color: #007bff;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
-  transition: transform 0.3s ease;
+}
+
+.project-btn:hover {
+  background: #007bff;
+  color: white;
 }
 
 
@@ -1486,5 +1478,111 @@ footer p {
   }
   100% {
     content: "Typing";
+  }
+}
+
+
+/* Timeline Section */
+#timeline-section {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  scroll-margin-top: -5rem;
+  flex-direction: column; /* Align title and timeline vertically */
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Timeline Line */
+line {
+  stroke: #007bff;
+  stroke-width: 4;
+}
+
+/* Timeline Dots */
+.timeline-dot {
+  fill: black;
+  stroke: white;
+  stroke-width: 2;
+  transition: transform 0.3s, fill 0.3s ease-in-out;
+}
+
+.timeline-dot:hover {
+  fill: #007bff;
+  transform: scale(1.3);
+}
+
+/* Highlight for Sciera (Still Working) */
+.glowing-dot {
+  fill: red;
+  animation: glowEffect 1.5s infinite alternate;
+}
+
+@keyframes glowEffect {
+  0% {
+    filter: drop-shadow(0 0 5px red);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px red);
+  }
+}
+
+/* Year Labels (Alternating) */
+.event-label {
+  font-size: 0.9rem;
+  fill: #333;
+  font-weight: bold;
+  text-anchor: middle;
+}
+
+/* Event Descriptions (Alternating) */
+.event-desc {
+  font-size: 0.8rem;
+  fill: #666;
+  text-anchor: middle;
+}
+
+/* Blinking Effect */
+.blinking {
+  font-weight: bold;
+  font-size: 1.2rem;
+  animation: blinkRed 1.5s infinite;
+}
+
+@keyframes blinkRed {
+  0%, 100% { color: red; opacity: 1; }
+  50% { color: red; opacity: 0.5; }
+}
+
+/* Title Positioned at the Top Center */
+.timeline-title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000; /* Changed to black */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #timeline-section {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .timeline-title {
+    font-size: 1.6rem;
+    top: 3%;
+  }
+
+  .event-label, .event-desc {
+    font-size: 0.7rem;
   }
 }
