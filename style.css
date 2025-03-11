@@ -416,7 +416,7 @@ nav {
   justify-content: center; /* Centers content vertically */
   align-items: center; /* Centers content horizontally */
   height: 100vh;
-  scroll-margin-top: -7rem;
+  scroll-margin-top: -7.5rem;
   padding: 3rem 2rem;
   background: linear-gradient(to right, #f9f9f9, #eaeaea);
 }
