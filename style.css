@@ -429,7 +429,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 2rem;
-  align-items: stretch; /* Ensures both columns match the tallest one */
+  align-items: flex-start ; /* Ensures both columns match the tallest one */
   gap: 2rem; 
 }
 
