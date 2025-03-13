@@ -76,34 +76,61 @@ function toggleMenu() {
   
     // Function to send a message to the backend
     async function sendMessage() {
-        const userMessage = chatInput.value.trim();
-        if (!userMessage) return;
+    const userMessage = chatInput.value.trim();
+    if (!userMessage) return;
+
+    console.log("User message:", userMessage);
   
-        addMessage("user", userMessage);
-        chatInput.value = "";
-        
-        const typingIndicator = showTypingIndicator();
-  
+    addMessage("user", userMessage);
+    chatInput.value = "";
+
+    const typingIndicator = showTypingIndicator();
+
+    try {
+        console.log("Sending request to server...");
+
+        const response = await fetch("https://portfolio-abcw.onrender.com/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question: userMessage }),
+        });
+
+        console.log("Response received. Status:", response.status);
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error(`HTTP error! Status: ${response.status}, Response: ${errorText}`);
+            throw new Error(`HTTP error! Status: ${response.status}, Response: ${errorText}`);
+        }
+
+        const text = await response.text();
+        console.log("Raw response text:", text);  // Logs raw response in case of JSON issues
+
         try {
-            const response = await fetch("https://portfolio-abcw.onrender.com/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ question: userMessage }),
-            });
-  
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-  
-            const data = await response.json();
+            const data = JSON.parse(text);  // Ensure response is valid JSON
+            console.log("Parsed response data:", data);
+
             chatBody.removeChild(typingIndicator);
             addMessage("bot", formatResponse(data.response));
-        } catch (error) {
-            console.error("Error:", error);
+        } catch (jsonError) {
+            console.error("JSON parsing error:", jsonError, "Response text:", text);
             chatBody.removeChild(typingIndicator);
+            addMessage("bot", "Error: Invalid server response.");
+        }
+
+    } catch (error) {
+        console.error("Error occurred:", error);
+
+        chatBody.removeChild(typingIndicator);
+
+        if (error.message.includes("Failed to fetch")) {
+            addMessage("bot", "Network issue. Please check your internet connection.");
+        } else {
             addMessage("bot", "Sorry, an error occurred.");
         }
     }
+}
+
   
     // Function to add messages to the chat UI with proper formatting
     function addMessage(sender, text) {
