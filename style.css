@@ -367,7 +367,7 @@ nav {
     margin-top : 5rem;
     min-height: 100vh; /* Full viewport height */
     padding: 2rem; /* Ensure proper spacing */
-    margin-bottom: 6rem ;
+    margin-bottom: 7.5rem ;
 }
 
   .section__pic-container {
@@ -562,102 +562,91 @@ h3 {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    padding: 3rem 1rem 2rem; /* Keep top padding */
-    margin-top: 0; /* Avoid pushing it down */
-    margin-bottom : 7rem;
-    scroll-margin-top: 12rem;
-    padding-bottom : 5rem ;
-    clear : both;
- }
+    padding: 2rem 1rem; /* Reduced padding */
+    margin-bottom: 3rem; /* Reduce extra space */
+    scroll-margin-top: 12.5rem; /* Adjust for better scrolling */
+  }
 
-
-  /* 🔹 About Containers */
+  /* 🔹 About Containers (Ensures Stacking) */
   .about-containers {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
-    gap: 2rem; /* Adds space between items */
-  }
-
-  /* 🔹 Image Container */
-  .section__pic-container {
-    width: 100%;
-    max-width: 250px; /* Balanced size for small screens */
-  }
-
-  /* 🔹 Experience & Details */
-  .experience-details-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     gap: 2rem;
   }
 
-  /* 🔹 Article Container */
-  .article-container {
+  /* 🔹 Left & Right Columns (Stack on Mobile) */
+  .left-column, 
+  .right-column {
+    width: 100%; /* Full width on mobile */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    gap: 1.5rem;
+    gap: 1rem; /* Reduce spacing */
   }
 
-  /* 🔹 Individual Articles */
-  article {
+  /* 🔹 Ensure About Details Container Aligns Properly */
+  .about-details-container-am {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     width: 100%;
-    max-width: 300px;
-    padding: 1rem;
-    border-radius: 10px;
   }
 
-  /* 🔹 Text Content */
+  /* 🔹 Ensure Text Doesn't Overflow */
   .text-container {
-    padding: 15px;
+    max-width: 100%; /* Make fully responsive */
     width: 90%;
+    padding: 15px;
     text-align: center;
     font-size: 1rem;
     line-height: 1.5;
   }
 
-  /* 🔹 Details Container */
+  /* 🔹 Experience & Details Boxes */
   .details-container {
     width: 90%;
+    max-width: 350px; /* Prevents stretching */
     text-align: center;
     padding: 1.5rem;
   }
 
-  /* 🔹 Left & Right Columns */
-  .left-column, 
-  .right-column {
-    display: flex;
+  /* 🔹 Adjust Section Container */
+  .section-container-am {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    gap: 2rem; /* Adds space between boxes */
+    max-width: 100%;
+    gap: 1rem; /* Reduce space between sections */
   }
 
-  /* 🔹 Button Styling */
+  /* 🔹 Image Container (For Profile or Icons) */
+  .section__pic-container {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* 🔹 Buttons & Headings */
   .btn {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
   }
+
   .section__text__p1 {
     text-align: center;
-    font-size: 1.5rem; /* Adjust size as needed */
-    font-weight: 600; /* Optional: Makes it slightly bolder */
+    font-size: 1.5rem;
+    font-weight: 600;
   }
+
   .title {
-    font-size: 4.5rem; /* Adjust to a smaller size */
+    font-size: 3rem; /* Reduce for mobile */
     text-align: center;
-    font-weight: bold; /* Keep it prominent */
+    font-weight: bold;
   }
-  
 }
 
 
@@ -1088,7 +1077,6 @@ article:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: white; /* Optional: Ensures visibility */
     z-index: 10; /* Moves it above other sections if needed */
   }
 }
@@ -1538,12 +1526,19 @@ footer p {
   width: 100%;
   height: 100vh; /* Full viewport height */
   display: flex;
+  min-height: 100vh;
   scroll-margin-top: -5rem;
   flex-direction: column; /* Align title and timeline vertically */
   justify-content: center;
+  scroll-margin-top: -1rem;
   align-items: center;
   padding: 20px 0;
   position: relative;
+  height: auto; /* Adjust height dynamically */
+  padding: 80px 0; /* Increase padding to push it down */
+  margin-top: 18rem; /* Ensure it starts after the previous section */
+  position: relative; /* Avoids overlap */
+  z-index: 2; /* Keeps it above other elements */
 }
 
 /* Timeline Line */
@@ -1638,3 +1633,89 @@ line {
   }
 }
 
+@media (max-width: 768px) {
+  /* 🔹 Make Timeline Section Adapt to Mobile */
+  #timeline-section {
+    height: auto; /* Adjust height dynamically */
+    padding: 40px 0; /* Add space above/below */
+  }
+
+  /* 🔹 Adjust Title */
+  .timeline-title {
+    font-size: 1.4rem; /* Smaller title */
+    top: 2%;
+    text-align: center;
+    width: 90%;
+  }
+
+  /* 🔹 Convert Horizontal Timeline to Vertical */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* 🔹 Adjust Timeline Line (Make it Vertical) */
+  line {
+    stroke-width: 3; /* Thinner line */
+
+    transform-origin: center;
+  }
+
+  /* 🔹 Adjust Timeline Dots for Mobile */
+  .timeline-dot {
+    r: 6; /* Smaller dots */
+    transition: transform 0.3s, fill 0.3s ease-in-out;
+  }
+
+  /* 🔹 Make Dots Glow on Hover */
+  .timeline-dot:hover {
+    fill: #007bff;
+    transform: scale(1.2);
+  }
+
+  /* 🔹 Ensure Labels Align Properly */
+  .event-label {
+    font-size: 0.75rem; /* Reduce font size */
+    fill: #333;
+    font-weight: bold;
+    text-anchor: middle;
+    transform: translateX(-10px); /* Slightly shift for readability */
+  }
+
+  /* 🔹 Event Descriptions Positioned Below */
+  .event-desc {
+    font-size: 0.7rem; /* Reduce font size */
+    fill: #666;
+    text-anchor: middle;
+    transform: translateY(10px); /* Move below dot */
+  }
+
+  /* 🔹 Highlight for Sciera (Still Working) */
+  .glowing-dot {
+    fill: red;
+    animation: glowEffect 1.5s infinite alternate;
+  }
+
+  @keyframes glowEffect {
+    0% {
+      filter: drop-shadow(0 0 5px red);
+    }
+    100% {
+      filter: drop-shadow(0 0 15px red);
+    }
+  }
+
+  /* 🔹 Blinking Effect */
+  .blinking {
+    font-weight: bold;
+    font-size: 1rem;
+    animation: blinkRed 1.5s infinite;
+  }
+
+  @keyframes blinkRed {
+    0%, 100% { color: red; opacity: 1; }
+    50% { color: red; opacity: 0.5; }
+  }
+}
