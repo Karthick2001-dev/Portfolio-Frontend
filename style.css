@@ -411,13 +411,12 @@ nav {
 
 #about {
   position: relative;
-  max-width: 1200px; 
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centers content vertically */
   align-items: center; /* Centers content horizontally */
   height: 100vh;
-  scroll-margin-top: -7.5rem;
+  scroll-margin-top: -6.5rem;
   padding: 3rem 2rem;
   background: linear-gradient(to right, #f9f9f9, #eaeaea);
 }
@@ -428,9 +427,8 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
   margin-top: 2rem;
-  align-items: stretch; /* Ensures both columns match the tallest one */
-  gap: 2rem; 
 }
 
 /* Experience and Education Boxes */
