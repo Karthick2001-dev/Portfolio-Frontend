@@ -1,3 +1,4 @@
+
 /* GENERAL */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
@@ -421,6 +422,30 @@ nav {
   background: linear-gradient(to right, #f9f9f9, #eaeaea);
 }
 
+.section-container-am {
+  display: flex;
+  gap: 2rem; /* Keeps a controlled spacing */
+  width: 100%;
+  max-width: 1500px; /* Defines the max width */
+  margin: 0 auto;
+  align-items: stretch; /* Ensures children stretch vertically */
+}
+
+
+
+.details-container-am {
+  padding: 2rem;
+  flex: 1;
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 2rem;
+}
+
 /* About Containers */
 .about-containers {
   display: flex;
@@ -430,6 +455,29 @@ nav {
   align-items: flex-start;
   margin-top: 2rem;
 }
+
+.about-details-container-am {
+  width: 100%; /* Ensures it takes full width */
+  max-width: 100%; /* Prevents unwanted width restrictions */
+  display: flex;
+  gap: 0rem;
+  flex-wrap: wrap; /* Moves to next line if no space */
+  justify-content: space-between; /* Evenly distributes items */
+  align-items: stretch; /* Ensures child elements stretch */
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+
+.about-details-container {
+  width: 100%;  /* Ensures it takes full available space */
+  display: flex;
+  flex-direction: column; /* Ensures proper alignment */
+  margin: 0;  /* Remove any extra margins */
+  padding: 0; /* Reset padding */
+}
+
 
 /* Experience and Education Boxes */
 .details-container {
@@ -449,9 +497,14 @@ nav {
   transform: scale(1.05);
 }
 
+.details-container-am:hover {
+  transform: scale(1.05);
+}
+
 /* About Text Styling */
 .text-container {
   background: rgba(255, 255, 255, 0.8);
+  padding-left: 0px;
   padding: 20px;
   border-radius: 12px;
   text-align: justify;
@@ -485,18 +538,18 @@ h3 {
 
 /* Adjusting Columns */
 .left-column {
-  flex: 1;
+  width: 30%; /* 1 part of 3 (1:2 ratio) */
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .right-column {
-  flex: 2;
+  width: 70%; /* 2 parts of 3 (1:2 ratio) */
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
 }
+
 
 
 
@@ -772,11 +825,9 @@ article:hover {
   justify-content: flex-start;  
   align-items: center;  
   padding: 2rem;
-  margin-top: 200px; /* ✅ Moves section down */
   width: 90%;  
   max-width: 1200px;  
   margin-bottom: 20%;
-  text-align: center;
 }
 
 
@@ -1586,3 +1637,4 @@ line {
     font-size: 0.7rem;
   }
 }
+
