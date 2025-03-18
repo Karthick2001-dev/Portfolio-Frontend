@@ -359,52 +359,121 @@ nav {
 
 @media (max-width: 768px) {
   #profile {
-    display: flex; /* Ensures proper centering */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top : 5rem;
-    min-height: 100vh; /* Full viewport height */
-    padding: 2rem; /* Ensure proper spacing */
-    margin-bottom: 7.5rem ;
-}
-
-  .section__pic-container {
-    display: none; /* Hide the profile picture */
+    margin-top: 5rem;
+    min-height: 100vh;
+    padding: 2rem;
+    margin-bottom: 7rem;
   }
 
+  /* Hide profile picture on mobile */
+  .section__pic-container {
+    display: none;
+  }
+
+  /* Adjust text container */
   .section__text {
     font-size: 1.3rem;
-    transform: none; /* Increase text size */
-    margin-top: -110px;
-
+    width: 90%;
+    margin-top: -100px;
   }
 
+  /* Increase subtitle size */
   .section__text__p1 {
-    font-size: 2rem; /* Make subtitle bigger */
+    font-size: 1.8rem;
     font-weight: 600;
   }
 
+  /* Increase main heading */
   .section__text__p2 {
-    font-size: 2rem; /* Increase the main heading */
+    font-size: 2rem;
     font-weight: bold;
   }
 
+  /* Adjust title */
   .title {
-    font-size: 5rem; /* Bigger title */
+    font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 700;
+    text-align: center;
   }
 
+  /* Adjust buttons */
   .btn-container {
-    gap: 2rem; /* Increase button spacing */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
   }
 
   .btn {
-    font-size: 1.1rem; /* Make buttons bigger */
+    font-size: 1.1rem;
     width: 10rem;
+    padding: 0.8rem 1.2rem;
   }
 }
+
+/* 📱 Additional Fixes for Smaller Devices */
+@media (max-width: 480px) {
+  #profile {
+    padding: 1.5rem;
+  }
+
+  .section__text {
+    font-size: 1.2rem;
+    width: 95%;
+    margin-top: -80px;
+  }
+
+  .section__text__p1 {
+    font-size: 1.6rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .btn-container {
+    gap: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    width: 9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .section__text {
+    font-size: 1.1rem;
+  }
+
+  .section__text__p1 {
+    font-size: 1.4rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.6rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    width: 8.5rem;
+  }
+}
+
 
 
 
@@ -554,80 +623,78 @@ h3 {
 
 
 
-
 @media (max-width: 768px) {
   /* 🔹 Main About Section */
   #about {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     min-height: 100vh;
-    padding: 2rem 1rem; /* Reduced padding */
-    margin-bottom: 3rem; /* Reduce extra space */
-    scroll-margin-top: 12.5rem; /* Adjust for better scrolling */
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+    scroll-margin-top: 10rem;
   }
 
-  /* 🔹 About Containers (Ensures Stacking) */
+  /* 🔹 About Containers */
   .about-containers {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: min(100%, 90vw); /* Adjust width dynamically */
     gap: 2rem;
   }
 
-  /* 🔹 Left & Right Columns (Stack on Mobile) */
-  .left-column, 
+  /* 🔹 Left & Right Columns */
+  .left-column,
   .right-column {
-    width: 100%; /* Full width on mobile */
+    width: min(100%, 90vw);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem; /* Reduce spacing */
+    gap: 1rem;
   }
 
-  /* 🔹 Ensure About Details Container Aligns Properly */
+  /* 🔹 About Details */
   .about-details-container-am {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    width: 100%;
+    width: min(100%, 90vw);
   }
 
   /* 🔹 Ensure Text Doesn't Overflow */
   .text-container {
-    max-width: 100%; /* Make fully responsive */
-    width: 90%;
+    max-width: 100%;
+    width: min(100%, 90vw);
     padding: 15px;
     text-align: center;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     line-height: 1.5;
   }
 
   /* 🔹 Experience & Details Boxes */
   .details-container {
-    width: 90%;
-    max-width: 350px; /* Prevents stretching */
+    width: min(100%, 90vw);
     text-align: center;
     padding: 1.5rem;
   }
 
-  /* 🔹 Adjust Section Container */
+  /* 🔹 Section Container */
   .section-container-am {
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 100%;
-    gap: 1rem; /* Reduce space between sections */
+    width: min(100%, 90vw);
+    gap: 1rem;
   }
 
-  /* 🔹 Image Container (For Profile or Icons) */
+  /* 🔹 Image Container */
   .section__pic-container {
-    width: 100%;
-    max-width: 250px;
+    width: min(100%, 250px);
   }
 
   /* 🔹 Buttons & Headings */
@@ -638,16 +705,78 @@ h3 {
 
   .section__text__p1 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     font-weight: 600;
   }
 
   .title {
-    font-size: 3rem; /* Reduce for mobile */
+    font-size: clamp(2rem, 6vw, 3rem);
     text-align: center;
     font-weight: bold;
   }
 }
+
+/* 📱 Fixes for Small Screens (Under 400px) */
+@media (max-width: 400px) {
+  #about {
+    padding: 1.5rem;
+    min-height: 100vh;
+  }
+
+  .text-container {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    line-height: 1.4;
+    padding: 1rem;
+    width: min(100%, 95vw);
+  }
+
+  .details-container {
+    width: min(100%, 90vw);
+    padding: 1.2rem;
+  }
+
+  .title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.3rem;
+    width: 8rem;
+    min-width: 6rem;
+  }
+}
+
+/* 📱 Extra Fixes for Very Small Screens (Under 360px) */
+@media (max-width: 375px) {
+  #about {
+    padding: 1.5rem;
+    min-height: 100vh; /* Ensures section fills the screen */
+  }
+
+  .text-container {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    padding: 0.8rem;
+    line-height: 1.4;
+    width: min(100%, 95vw); /* Adjust width dynamically */
+  }
+
+  .details-container {
+    width: min(100%, 90vw);
+  }
+
+  .title {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+    width: 7.5rem;
+    min-width: 6rem;
+  }
+}
+
 
 
 
@@ -735,71 +864,132 @@ article:hover {
 }
 
 
-/* For Mobile Screens */
-@media (max-width: 767px) {
+/* 🔹 For Mobile Screens */
+@media (max-width: 768px) {
   #experience {
-      height: auto; /* Allow content to expand */
-      min-height: 90vh; /* Reduce min-height slightly */
-      padding: 0.8rem; /* Reduce padding */
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start; /* Push content down */
-      align-items: center;
-      scroll-margin-top: -3rem;
-      padding-top: 4rem; /* Reduce top spacing */
-      margin-top: 3rem; /* Bring section down */
+    height: auto; /* Allow content to expand */
+    min-height: 90vh;
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-margin-top: -3rem;
+    padding-top: 4rem;
+    margin-top: 3rem;
+    width: min(100%, 95vw);
   }
 
-  /* Reduce Title Size */
+  /* 🔹 Reduce Title Size */
   .experience-sub-title {
-      font-size: 1.3rem; /* Make it smaller */
-      margin-bottom: 0.4rem; /* Reduce spacing */
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    margin-bottom: 0.4rem;
   }
 
-  /* Reduce Experience Item Spacing */
-  .experience-item, .education-item {
-      margin-bottom: 2px; /* Reduce bottom margin further */
+  /* 🔹 Reduce Experience Item Spacing */
+  .experience-item,
+  .education-item {
+    margin-bottom: 4px;
+    width: min(100%, 90vw);
   }
 
-  .experience-item h1, .education-item h4 {
-      font-size: 0.85rem; /* Make text even smaller */
+  .experience-item h1,
+  .education-item h4 {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
   }
 
-  /* Reduce Spacing for Content */
-  .experience-content, .education-content {
-      margin-top: 2px; /* Reduce top margin */
+  /* 🔹 Reduce Spacing for Content */
+  .experience-content,
+  .education-content {
+    margin-top: 2px;
   }
 
-  /* Reduce Arrow Size */
+  /* 🔹 Reduce Arrow Size */
   .arrow {
-      width: 25px; /* Make arrow smaller */
-      height: 25px;
-      margin-top: 15px;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
   }
 
-  /* Reduce Section Container Width */
+  /* 🔹 Reduce Section Container Width */
   .section-container {
-      max-width: 1000px; /* Decrease width slightly */
-      gap: 10px; /* Reduce gap */
+    max-width: 100%;
+    gap: 10px;
   }
 
-  /* Make Experience Details Smaller */
+  /* 🔹 Make Experience Details Smaller */
   .experience-details-container {
-      max-width: 900px; /* Reduce width */
+    width: min(100%, 90vw);
   }
 
-  /* Reduce Article Container Spacing */
+  /* 🔹 Reduce Article Container Spacing */
   .article-container {
-      gap: 0.2rem; /* Reduce space between articles */
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
-  /* Reduce Article Size */
+  /* 🔹 Reduce Article Size */
   article {
-      width: 22%; /* Make articles smaller */
-      margin-bottom: 1rem; /* Reduce bottom spacing */
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
   }
 }
+
+/* 📱 Fixes for Screens Below 400px */
+@media (max-width: 400px) {
+  #experience {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .experience-sub-title {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+
+  .experience-item h1,
+  .education-item h4 {
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+  }
+
+  .arrow {
+    width: 18px;
+    height: 18px;
+  }
+
+  .article-container {
+    gap: 0.3rem;
+  }
+
+  article {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+/* 📱 Extra Fixes for Very Small Screens (Under 360px) */
+@media (max-width: 360px) {
+  .experience-sub-title {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+
+  .experience-item h1,
+  .education-item h4 {
+    font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+  }
+
+  .arrow {
+    width: 16px;
+    height: 16px;
+  }
+
+  article {
+    padding: 0.6rem;
+  }
+}
+
 
 
 
