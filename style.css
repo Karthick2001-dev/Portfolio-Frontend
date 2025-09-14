@@ -1816,3 +1816,9 @@ line {
     font-size: 0.7rem;
   }
 }
+
+/* This rule targets the SVG element directly */
+svg {
+  width: 100%;
+  height: auto;
+}
