@@ -1817,8 +1817,8 @@ line {
   }
 }
 
-/* This rule targets the SVG element directly */
-svg {
-  width: 100%;
+/* This rule will override any conflicting rules and fix the timeline size */
+#timeline-section .timeline-container svg {
+  width: 100% !important;
   height: auto;
 }
